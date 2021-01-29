@@ -1,0 +1,37 @@
+{
+    "name": "hodgy/ec2-ip-finder",
+    "description": "Find the private IP address of an AWS EC2 instance based on environment and role tags",
+    "keywords": [
+        "aws",
+        "ec2",
+        "ip"
+    ],
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "James Hodgson",
+            "email": "james@tdchodgy.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "ext-json": "*",
+        "aws/aws-sdk-php": "^3.171",
+        "symfony/console": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hodgy\\Ec2IpFinder\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform": {},
+        "preferred-install": "dist"
+    },
+    "support": {
+        "issues": "https://github.com/Hodgy/ec2-ip-finder/issues?state=open",
+        "source": "https://github.com/Hodgy/ec2-ip-finder"
+    }
+}
