@@ -4,10 +4,13 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Hodgy\Ec2IpFinder\Command\FindCommand;
+use Hodgy\Ec2IpFinder\Ec2IpFinder;
 use Symfony\Component\Console\Application;
 
 $command = new FindCommand();
 $application = new Application();
+$application->setName("EIF");
+$application->setVersion(Ec2IpFinder::getVersion());
 $application->add($command);
 $application->setDefaultCommand($command->getName(), true);
 $application->run();
