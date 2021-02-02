@@ -11,6 +11,12 @@ if [ "$(command -v box 2>/dev/null || true)" = "" ]; then
   exit 1
 fi
 
+VERSION=$(git describe --tags --exact-match HEAD 2>/dev/null || git log --pretty="%H" -n1 HEAD)
+sed -i "s/@package_version@/$VERSION/g" "src/Ec2IpFinder.php"
+
+RELEASE_DATE=$(date +"%Y-%m-%d %T")
+sed -i "s/@release_date@/$VERSION/g" "src/Ec2IpFinder.php"
+
 box validate || exit 1
 box compile  || exit 1
 

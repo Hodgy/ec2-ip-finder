@@ -53,5 +53,5 @@
     "replacement-sigil": "$",
     "git-commit-short": "Id",
     "main": "bin/eif",
-    "output": "eif"
+    "output": "eif.phar"
 }

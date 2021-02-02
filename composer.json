@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.2",
         "ext-json": "*",
         "aws/aws-sdk-php": "^3.171",
         "symfony/console": "^5.2"
@@ -27,7 +27,6 @@
     "config": {
         "sort-packages": true,
         "optimize-autoloader": true,
-        "platform": {},
         "preferred-install": "dist"
     },
     "support": {

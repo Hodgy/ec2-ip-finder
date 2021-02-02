@@ -12,13 +12,13 @@ class Ec2IpFinder
      * const RELEASE_DATE = '2019-01-29 15:00:53';
      * const SOURCE_VERSION = '';
      *
-     *
      * source (git clone):
      * const VERSION = '@package_version@';
      * const RELEASE_DATE = '@release_date@';
-     * const SOURCE_VERSION = '1.8-dev+source';
+     * const SOURCE_VERSION = '0.0.1-dev+source';
      */
     const VERSION = '@package_version@';
+    const RELEASE_DATE = '@release_date@';
     const SOURCE_VERSION = '0.0.1-dev+source';
 
     public static function getVersion()
@@ -29,5 +29,15 @@ class Ec2IpFinder
         }
 
         return self::VERSION;
+    }
+
+    public static function getReleaseDate()
+    {
+        // no replacement done, this must be a source checkout
+        if (self::RELEASE_DATE === '@release_date'.'@') {
+            return date('Y-m-d h:i:s a', time());
+        }
+
+        return self::RELEASE_DATE;
     }
 }

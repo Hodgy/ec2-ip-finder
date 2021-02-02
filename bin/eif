@@ -10,7 +10,7 @@ use Symfony\Component\Console\Application;
 $command = new FindCommand();
 $application = new Application();
 $application->setName("EIF");
-$application->setVersion(Ec2IpFinder::getVersion());
+$application->setVersion(Ec2IpFinder::getVersion() . ' ' . Ec2IpFinder::getReleaseDate());
 $application->add($command);
 $application->setDefaultCommand($command->getName(), true);
 $application->run();
