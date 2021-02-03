@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Set Environment Variables
-        uses: allenevans/set-env@v1.0.0
+        uses: allenevans/set-env@v2.0.0
         with:
           BOX_VERSION: '3.8.4'
 
@@ -30,7 +30,7 @@ jobs:
 
       # Ensure that deps will work on lowest supported PHP version
       - name: Choose a Suitable PHP Version to Build PHAR
-        run: composer config platform.php 7.0.33
+        run: composer config platform.php 7.2.32
 
       - name: Get Composer Cache Directory
         id: composer-cache

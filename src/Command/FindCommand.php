@@ -16,11 +16,6 @@ class FindCommand extends Command
 {
     protected static $defaultName = 'find';
 
-    public function __construct(string $name = null)
-    {
-        parent::__construct($name);
-    }
-
     protected function configure()
     {
         $this->addArgument('env', InputArgument::REQUIRED, 'Which environment');
