@@ -15,7 +15,7 @@ VERSION=$(git describe --tags --exact-match HEAD 2>/dev/null || git log --pretty
 sed -i "s/@package_version@/$VERSION/g" "src/Ec2IpFinder.php"
 
 RELEASE_DATE=$(date +"%Y-%m-%d %T")
-sed -i "s/@release_date@/$VERSION/g" "src/Ec2IpFinder.php"
+sed -i "s/@release_date@/$RELEASE_DATE/g" "src/Ec2IpFinder.php"
 
 box validate || exit 1
 box compile  || exit 1
